@@ -1,12 +1,12 @@
-from flask import Flask
+from flask import Flask,render_template
 
 app=Flask(__name__)
 @app.route("/home")
 def index():
-    return "<h2>hello</h2><h3> hi</h3>"
+    return render_template("index.html") 
 @app.route("/contact")
 def contact():
-    return "contact  64668  5464687658 787856851656"
+    return render_template("contact.html")
 @app.route("/error")
 def error():
     return "Get out"
